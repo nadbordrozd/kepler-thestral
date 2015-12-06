@@ -32,5 +32,4 @@ window.addEventListener("load", function() {
 
     Q.debug = true;
 
-
 }); 
