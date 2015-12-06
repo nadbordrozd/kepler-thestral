@@ -33,7 +33,7 @@ Quintus.MySprites = function(Q) {
                 fire: "fire", max_health: 1});
             this.p.health = this.p.max_health;
             this.add("2d, reposition");
-            this.p.color = Q.PLAYERS[p.name].color;
+            this.p.color = p.color || Q.PLAYERS[p.name].color;
             Q.input.on(this.p.fire, this, "fireWeapon");
             this.on("hit.sprite", this, "collision");
         },

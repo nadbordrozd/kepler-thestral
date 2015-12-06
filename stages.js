@@ -22,6 +22,14 @@ Quintus.MyStages = function(Q) {
             on_color: "#FFFF00", off_color: "#FFFFAA", label: "vngbc", is_on: false}));
 		stage.insert(new Q.TogglePlayerButton({x: 200, y: 500, name: "PURPLE",
             on_color: "#7700FF", off_color: "#AA77FF", label: "mouse", is_on: false}));
+			
+			
+			
+		var level1 = stage.insert(new Q.UI.Button({x: 450, y: 100, fill: "#ABCDEF", label: "level1"}));
+		level1.on("click", function(){
+			Q.clearStages();
+			Q.stageScene("centripetal");
+		});
     });
 
     Q.scene("level_selector", function(stage) {
@@ -141,11 +149,6 @@ Quintus.MyStages = function(Q) {
             stage.insert(new Q.LargeRock(rand_xy()));
         Q.state.set("game_stage", stage);
     });
-	
-	
-	Q.scene("centripetal", function(stage) {
-		stage.insert(new Q.PointAndClickRocket({}));
-    });
-	
+
 	
 }

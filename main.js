@@ -1,7 +1,8 @@
 window.addEventListener("load", function() {
     var Q = window.Q = Quintus({audioSupported: ['ogg']})
             .include("Sprites, Scenes, 2D, Input, Touch, UI, Anim, MyStages, \n\
-                        MySprites, MyState, Reposition, GameMaster")
+                        MySprites, MyState, Reposition, GameMaster, \n\
+						KeplerSprites, KeplerStages")
             .setup({maximize: true})//({  width: 1024, height: 768})         // {maximize: true} Maximize this game to whatever the size of the browser is
             .controls();         // And turn on default input controls and touch input (for UI)
     Q.touch(Q.SPRITE_UI, [1, 0]);
@@ -29,7 +30,7 @@ window.addEventListener("load", function() {
 //        Q.stageScene("level_selector");
     });
 
-    Q.debug = false;
+    Q.debug = true;
 
 
 }); 
